@@ -6,6 +6,7 @@ module.exports = function(eleventyConfig){
     //Eleventy ignore files and folders that don't have templating languages, so we have to tell it to also get other files such as css or imnages
     eleventyConfig.addPassthroughCopy('./src/style.css');
     eleventyConfig.addPassthroughCopy('./src/assets');
+    eleventyConfig.addPassthroughCopy('./src/admin');
 
     eleventyConfig.addFilter("postDate", (dateObj) => {
       return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED)
